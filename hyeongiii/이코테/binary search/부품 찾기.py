@@ -26,7 +26,7 @@ for i in b:
         print("no", end=" ")
 
 
-# 책 풀이
+# 책 풀이 : 이분 탐색
 def binary_search(arr, target, start, end):
     while start <= end:
         mid = (start + end) // 2
@@ -43,6 +43,42 @@ def binary_search(arr, target, start, end):
 for i in b:
     result = binary_search(a, i, 0, n - 1)
     if result is not None:
+        print("yes", end=" ")
+    else:
+        print("no", end=" ")
+
+
+
+# 책 풀이: 계수 정렬
+n = int(input())
+array = [0] * (n + 1)
+
+# 가게에 있는 전체 부품 번호를 입력받아서 기록
+for i in input().split():
+    array[int(i)] = 1
+
+m = int(input())
+x = list(map(int, input().split()))
+
+# 손님이 확인 요청한 부품 번호를 하나씩 확인
+for i in x:
+    if array[i] == 1:
+        print("yes", end=" ")
+    else:
+        print("no", end=" ")
+
+
+
+# 책 풀이: 집합 자료형 이용
+n = int(input())
+# 가게에 있는 전체 부품 번호를 입력받아서 집합(set) 자료형에 기록
+array = set(map(int, input().split()))
+
+m = int(input())
+x = list(map(int, input().split()))
+
+for i in x:
+    if i in array:
         print("yes", end=" ")
     else:
         print("no", end=" ")
