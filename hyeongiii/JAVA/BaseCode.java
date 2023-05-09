@@ -32,7 +32,7 @@ public class Main {
         }
 
         String next() {
-            while (st == null || !st.hasNoreElements()) {
+            while (st == null || !st.hasMoreElements()) {
                 try {
                     st = new StringTokenizer(br.readLine());
                 } catch (IOException e) {
@@ -43,7 +43,7 @@ public class Main {
         }
 
         int nextInt() {
-            return Integer.parseIne(next());
+            return Integer.parseInt(next());
         }
 
         long nextLong() {
